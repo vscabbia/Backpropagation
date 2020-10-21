@@ -12,36 +12,33 @@ package negocio;
 public class Backpropagation {
 
     double[] t = new double[300];
-    double w0 = 0.02074;
-    double[][] v = {{0.085}, {-0.033}, {10.074}, {1 - 0.075}, {0.088}, {-0.077}};
-    double[][] w = {{0.082}, {-0.09}, {0.064}, {-0.08}, {10.084}, {-0.075}};
-    double[][] v0 = {{10.09}, {-0.08}, {10.063}, {1 - 0.065}, {10.076}, {0.072}};
+    public double w0 = 0.02074;
+    public double[][] v = {{0.085}, {-0.033}, {10.074}, {1 - 0.075}, {0.088}, {-0.077}};
+    public double[][] w = {{0.082}, {-0.09}, {0.064}, {-0.08}, {10.084}, {-0.075}};
+    public double[][] v0 = {{10.09}, {-0.08}, {10.063}, {1 - 0.065}, {10.076}, {0.072}};
     double alpha = 0.00035;
 
     double[][] z = new double[6][1];
     double[][] zf = new double[6][1];
     double[][] zff = new double[6][1];
     double[] y = new double[300];
-
     double[] yf = new double[300];
-
     double[] yff = new double[300];
     double[] erro = new double[300];
     double[] errow = new double[300];
     double[][] deltaw = new double[6][1];
     double deltaw0 = 0.0;
-
     double[][] deltav = new double[6][1];
     double[][] deltav0 = new double[6][1];
+    
     double[][] zz = new double[6][1];
     double[][] zzf = new double[6][1];
     double[][] zzff = new double[6][1];
     double[] yy = new double[300];
-
-    double[] yvyf = new double[300];
+    double[] yyf = new double[300];
     double[] Yamanaka = new double[600];
 
-    public void iteraçãoIII() {
+    public void iteracao_III() {
         for (int x = 0; x < 300; x++) {
             t[x] = Math.sin(2 * x * Math.PI / 180) * Math.sin(x * Math.PI / 180);
         }
@@ -127,7 +124,7 @@ public class Backpropagation {
             System.out.println("número de treinamentos " + n + "\n");
         }
     }
-    public double [] testa_backpropagation(double [][]vv0, double [][]vv, double [][] ww0, double [][]ww){
+    public double [] teste_backpropagation(double [][]vv0, double [][]vv, double ww0, double [][]ww){
         System.out.println("peso w0" + ww0);
         
         for(int j = 0; j <= 5; j++) {
@@ -170,7 +167,7 @@ public class Backpropagation {
             Yamanaka[j] = yyf[k];
             k++;
         }
-        return Yamanaka
+        return Yamanaka;
     }
     
 }

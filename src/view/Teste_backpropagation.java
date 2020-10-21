@@ -30,7 +30,7 @@ public class Teste_backpropagation extends javax.swing.JFrame {
         
         bck.iteracao_III();
         
-        backp = bck.teste_backpropagatiom(bck.v0, bck.v, bck.w0, bck.w);
+        backp = bck.teste_backpropagation(bck.v0, bck.v, bck.w0, bck.w);
         
         JFrame aplicacao = new JFrame();
         aplicacao.getContentPane().setBackground (new Color (255,255,255));
