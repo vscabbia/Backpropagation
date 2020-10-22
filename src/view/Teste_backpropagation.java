@@ -7,10 +7,8 @@ package view;
 
 import negocio.*;
 
-import javax.swing.JOptionPane;
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.JFrame;
 
 /**
  *
@@ -18,10 +16,10 @@ import javax.swing.JFrame;
  */
 public class Teste_backpropagation extends javax.swing.JFrame {
     
-    static double [] pesos = new double [600];
+    static double [] pesos = new double[600];
     static double [] backp = new double[600];
     
-    public static void main(String args[]){
+    public static void main(String args[]){ 
         
         Grafico g = new Grafico();
         Grafico gf;
@@ -37,7 +35,7 @@ public class Teste_backpropagation extends javax.swing.JFrame {
         aplicacao.setTitle("Redes Neurais Artificiais");
         aplicacao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         aplicacao.add(g);
-        aplicacao.setSize(500,400);
+        aplicacao.setSize(500,480);
         aplicacao.setVisible(true);
     }
     

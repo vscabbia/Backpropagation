@@ -127,5 +127,6 @@ public class Grafico extends JPanel{
             g.drawLine(xx - 1, (int) n - 1, xx, (int) n);
             xx++;
         }
+        
     }
 }
